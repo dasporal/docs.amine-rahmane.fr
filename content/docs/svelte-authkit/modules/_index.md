@@ -1,4 +1,4 @@
-[Index](/docs/svelte-authkit)
+[@dasporal/svelte-authkit](README.md) / Exports
 
 # @dasporal/svelte-authkit
 
@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[src/lib/stores/userStore.js:4](https://github.com/dasporal/svelte-authkit/blob/63afb5e/src/lib/stores/userStore.js#L4)
+[src/lib/stores/userStore.js:4](https://github.com/dasporal/svelte-authkit/blob/88b9855/src/lib/stores/userStore.js#L4)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-[src/lib/stores/userStore.js:3](https://github.com/dasporal/svelte-authkit/blob/63afb5e/src/lib/stores/userStore.js#L3)
+[src/lib/stores/userStore.js:3](https://github.com/dasporal/svelte-authkit/blob/88b9855/src/lib/stores/userStore.js#L3)
 
 ## Functions
 
@@ -77,7 +77,7 @@ const response = await AuthkitCallback({
 
 #### Defined in
 
-[src/lib/utils/server/hooks.ts:64](https://github.com/dasporal/svelte-authkit/blob/63afb5e/src/lib/utils/server/hooks.ts#L64)
+[src/lib/utils/server/hooks.ts:65](https://github.com/dasporal/svelte-authkit/blob/88b9855/src/lib/utils/server/hooks.ts#L65)
 
 ___
 
@@ -114,7 +114,7 @@ const response = await AuthkitSignIn({
 
 #### Defined in
 
-[src/lib/utils/server/hooks.ts:22](https://github.com/dasporal/svelte-authkit/blob/63afb5e/src/lib/utils/server/hooks.ts#L22)
+[src/lib/utils/server/hooks.ts:23](https://github.com/dasporal/svelte-authkit/blob/88b9855/src/lib/utils/server/hooks.ts#L23)
 
 ___
 
@@ -138,7 +138,7 @@ const response = await AuthkitSignOut();
 
 #### Defined in
 
-[src/lib/utils/server/hooks.ts:184](https://github.com/dasporal/svelte-authkit/blob/63afb5e/src/lib/utils/server/hooks.ts#L184)
+[src/lib/utils/server/hooks.ts:185](https://github.com/dasporal/svelte-authkit/blob/88b9855/src/lib/utils/server/hooks.ts#L185)
 
 ___
 
@@ -153,7 +153,7 @@ Asynchronous function that verifies the stored token containing user inforomatio
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `params` | `Object` | An object containing the necessary parameters to verify the token. |
-| `params.request` | `Request` | The WorkOS client ID. |
+| `params.event` | `RequestEvent`\<`Partial`\<`Record`\<`string`, `string`\>\>, ``null`` \| `string`\> | The RequestEvent containing the token. |
 | `params.secret` | `Uint8Array` | The instance of the WorkOS object. |
 
 #### Returns
@@ -166,14 +166,14 @@ A new instance of the Response object. This response contains the verification s
 
 ```ts
 const response = await AuthkitVerifyToken({
-    request: request,
+    event: event,
     secret: secret
 });
 ```
 
 #### Defined in
 
-[src/lib/utils/server/hooks.ts:124](https://github.com/dasporal/svelte-authkit/blob/63afb5e/src/lib/utils/server/hooks.ts#L124)
+[src/lib/utils/server/hooks.ts:125](https://github.com/dasporal/svelte-authkit/blob/88b9855/src/lib/utils/server/hooks.ts#L125)
 
 ___
 
@@ -203,7 +203,7 @@ const workos = initWorkOS('env_workos_api_key');
 
 #### Defined in
 
-[src/lib/utils/server/workos.ts:12](https://github.com/dasporal/svelte-authkit/blob/63afb5e/src/lib/utils/server/workos.ts#L12)
+[src/lib/utils/server/workos.ts:12](https://github.com/dasporal/svelte-authkit/blob/88b9855/src/lib/utils/server/workos.ts#L12)
 
 ___
 
@@ -227,7 +227,7 @@ await signIn();
 
 #### Defined in
 
-[src/lib/utils/client/auth.ts:11](https://github.com/dasporal/svelte-authkit/blob/63afb5e/src/lib/utils/client/auth.ts#L11)
+[src/lib/utils/client/auth.ts:11](https://github.com/dasporal/svelte-authkit/blob/88b9855/src/lib/utils/client/auth.ts#L11)
 
 ___
 
@@ -251,7 +251,7 @@ await signOut();
 
 #### Defined in
 
-[src/lib/utils/client/auth.ts:26](https://github.com/dasporal/svelte-authkit/blob/63afb5e/src/lib/utils/client/auth.ts#L26)
+[src/lib/utils/client/auth.ts:26](https://github.com/dasporal/svelte-authkit/blob/88b9855/src/lib/utils/client/auth.ts#L26)
 
 ___
 
@@ -277,4 +277,4 @@ await verifyToken();
 
 #### Defined in
 
-[src/lib/utils/client/auth.ts:43](https://github.com/dasporal/svelte-authkit/blob/63afb5e/src/lib/utils/client/auth.ts#L43)
+[src/lib/utils/client/auth.ts:43](https://github.com/dasporal/svelte-authkit/blob/88b9855/src/lib/utils/client/auth.ts#L43)
